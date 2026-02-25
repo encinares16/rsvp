@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>J & J - RSVP</title>
+  <link rel="icon" type="image/png" href="wedding-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="tailwind.config.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+       style="background: rgba(250,246,240,0.94); backdrop-filter: blur(16px);">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <a href="#home" class="flex items-center gap-2">
+          <span style="color:#C9A84C; font-size:1.1rem;">✦</span>
+          <span class="font-serif text-lg" style="color:#2C1F14; font-style:italic; font-weight:400; letter-spacing:0.04em;">J & J</span>
+          <span style="color:#C9A84C; font-size:1.1rem;">✦</span>
+        </a>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#rsvp" class="nav-link">RSVP</a>
+          <a href="#schedule" class="nav-link">Schedule</a>
+          <a href="#travel" class="nav-link">Travel</a>
+          <a href="#faq" class="nav-link">FAQ</a>
+          <a href="#story" class="nav-link">Gallery</a>
+          <a href="#rsvp" class="btn-gold text-xs">Respond Now</a>
+        </div>
+        <button id="mobileMenuBtn" class="lg:hidden p-2" style="color:#8C7B6B;">
+          <svg id="menuIconOpen" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="menuIconClose" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="lg:hidden mobile-menu border-t" style="border-color:#EDE5D8;">
+      <div class="px-6 py-5 flex flex-col gap-4">
+        <a href="#home" class="nav-link mobile-nav-link">Home</a>
+        <a href="#rsvp" class="nav-link mobile-nav-link">RSVP</a>
+        <a href="#schedule" class="nav-link mobile-nav-link">Schedule</a>
+        <a href="#travel" class="nav-link mobile-nav-link">Travel</a>
+        <a href="#faq" class="nav-link mobile-nav-link">FAQ</a>
+        <a href="#rsvp" class="btn-gold inline-block text-center mt-2 mobile-nav-link">RSVP Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home" class="hero-bg min-h-screen flex flex-col items-center justify-center text-center px-6 pt-20 pb-16 relative overflow-hidden">
+    <div class="float-petal absolute top-24 left-10 opacity-30" style="font-size:2rem; color:#C9A84C;">✾</div>
+    <div class="float-petal-2 absolute top-40 right-14 opacity-20" style="font-size:1.5rem; color:#C9A84C;">❋</div>
+    <div class="float-petal-3 absolute bottom-32 left-1/4 opacity-25" style="font-size:1.8rem; color:#E8C98A;">✿</div>
+    <div class="float-petal absolute bottom-40 right-1/3 opacity-20" style="font-size:1.3rem; color:#C9A84C;">✦</div>
+    <div class="max-w-3xl mx-auto relative z-10">
+      <p class="fade-in font-sans font-light tracking-widest text-xs mb-6" style="color:#8C7B6B; letter-spacing:0.25em; text-transform:uppercase;">By the grace of God and with the blessings of our families</p>
+      <div class="fade-in-delay-1 mb-4">
+        <h1 class="font-serif" style="font-size: clamp(4rem, 12vw, 8rem); font-weight:300; color:#2C1F14; line-height:0.9; font-style:italic;">Jerome</h1>
+        <div class="flex items-center justify-center gap-4 my-3">
+          <div class="deco-line"></div>
+          <span class="ornament">✦</span>
+          <div class="deco-line"></div>
+        </div>
+        <h1 class="font-serif" style="font-size: clamp(4rem, 12vw, 8rem); font-weight:300; color:#2C1F14; line-height:0.9; font-style:italic;">Justine</h1>
+      </div>
+      <p class="fade-in-delay-2 font-sans font-light tracking-widest text-xs mt-8 mb-4" style="color:#8C7B6B; letter-spacing:0.2em; text-transform:uppercase;">We request the honor of your presence</p>
+      <p class="fade-in-delay-2 font-sans font-light tracking-widest text-xs mt-8 mb-4" style="color:#8C7B6B; letter-spacing:0.2em; text-transform:uppercase;">on our wedding day</p>
+      <div class="fade-in-delay-3 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mt-6 mb-10">
+        <div class="text-center">
+          <p class="font-sans font-light text-xs tracking-widest mb-1" style="color:#C9A84C; text-transform:uppercase; letter-spacing:0.2em;">Date</p>
+          <p class="font-serif text-xl font-light" style="color:#2C1F14;">May 20, 2026, Wednesday</p>
+        </div>
+        <div class="hidden sm:block w-px h-10 bg-champagneDark opacity-50"></div>
+        <div class="text-center">
+          <p class="font-sans font-light text-xs tracking-widest mb-1" style="color:#C9A84C; text-transform:uppercase; letter-spacing:0.2em;">Ceremony</p>
+          <p class="font-serif text-xl font-light" style="color:#2C1F14;">2:30 PM</p>
+        </div>
+        <div class="hidden sm:block w-px h-10 bg-champagneDark opacity-50"></div>
+        <div class="text-center">
+          <p class="font-sans font-light text-xs tracking-widest mb-1" style="color:#C9A84C; text-transform:uppercase; letter-spacing:0.2em;">Location</p>
+          <p class="font-serif text-xl font-light" style="color:#2C1F14;">Fairmount Hill Event Place, Antipolo Rizal</p>
+        </div>
+      </div>
+      <div class="fade-in-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#rsvp" class="btn-gold inline-block">Respond Now</a>
+        <a href="#schedule" class="btn-outline inline-block">View Details</a>
+      </div>
+    </div>
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40">
+      <div class="w-px h-10 bg-gradient-to-b from-champagneDark to-transparent"></div>
+    </div>
+  </section>
+
+  <section id="rsvp" class="py-24 px-6" style="background: #FAF6F0;">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-14">
+        <p class="font-sans font-light tracking-widest text-xs mb-3" style="color:#C9A84C; letter-spacing:0.25em; text-transform:uppercase;">You Are Invited</p>
+        <h2 class="font-serif text-5xl font-light mb-4" style="color:#2C1F14; font-style:italic;">RSVP</h2>
+        <div class="section-divider"><span class="ornament text-sm">✦</span></div>
+        <p class="font-sans font-light text-sm" style="color:#8C7B6B; line-height:1.8; max-width:480px; margin:0 auto;">Kindly respond by <strong style="color:#A07830; font-weight:400;">March 15, 2026</strong>. We cannot wait to celebrate with you!</p>
+      </div>
+
+      <!-- RSVP Form -->
+      <div id="rsvp-form-area" style="background: white; border: 1px solid #EDE5D8; padding: 2.5rem 2rem;">
+
+        <!-- Attendance toggle -->
+        <div class="mb-8">
+          <p class="form-label text-center mb-4" style="font-size:0.7rem;">Will you be attending? *</p>
+          <div class="flex gap-4 justify-center flex-wrap">
+            <div class="custom-radio">
+              <input type="radio" id="yes" name="attending" value="yes" />
+              <label for="yes">
+                <span style="font-family:'Cormorant Garamond', serif; font-style:italic; font-size:1rem;">Joyfully Accepts</span>
+              </label>
+            </div>
+            <div class="custom-radio">
+              <input type="radio" id="no" name="attending" value="no" />
+              <label for="no">
+                <span style="font-family:'Cormorant Garamond', serif; font-style:italic; font-size:1rem;">Regretfully Declines</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Guest info -->
+        <div class="gap-5 mb-5">
+          <div>
+            <label class="form-label">Full Name *</label>
+            <input type="text" id="name" class="form-input" placeholder="Your Full Name" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+          <div>
+            <label class="form-label">Email Address *</label>
+            <input type="email" id="email" class="form-input" placeholder="you@gmail.com" />
+          </div>
+          <div>
+            <label class="form-label">Phone Number</label>
+            <input type="tel" id="phone" class="form-input" placeholder="+63 951-051-5932" value="+63 " maxlength="17"/>
+          </div>
+        </div>
+
+        <!-- Number of guests -->
+        <div id="guestCountSection" class="mb-8" style="display:none;">
+          <label class="form-label">Number of Guests in Your Party</label>
+          <div class="flex items-center gap-4">
+            <button id="guestMinus" class="w-9 h-9 flex items-center justify-center border" style="border-color:#E8C98A; color:#C9A84C; font-size:1.2rem;" type="button">−</button>
+            <span id="guestCountDisplay" class="font-serif text-2xl font-light" style="color:#2C1F14; min-width:2rem; text-align:center;">1</span>
+            <button id="guestPlus" class="w-9 h-9 flex items-center justify-center border" style="border-color:#E8C98A; color:#C9A84C; font-size:1.2rem;" type="button">+</button>
+          </div>
+        </div>
+
+        <!-- Note -->
+        <div class="mb-8">
+          <label class="form-label">Message to the Couple</label>
+          <textarea id="note" class="form-input" rows="3" placeholder="Share your well-wishes, notes, or anything you'd like us to know..."></textarea>
+        </div>
+
+        <div id="rsvp-error" class="mb-4 text-sm font-sans font-light" style="color:#c0392b; display:none;"></div>
+
+        <button id="submitRsvpBtn" class="btn-gold w-full">Send My RSVP</button>
+      </div>
+
+    <!-- Modal -->
+<div id="confirmModal">
+  <div class="modal-box">
+
+    <span class="modal-ornament">✦ ✦ ✦</span>
+    <p class="modal-title">Confirm Your RSVP</p>
+    <div class="modal-divider"></div>
+
+    <!-- Name row -->
+    <div class="modal-row">
+      <span class="modal-field-label">Name</span>
+      <span class="modal-field-value" id="modal-name">—</span>
+    </div>
+
+    <!-- Status row -->
+    <div class="modal-row">
+      <span class="modal-field-label">Attendance</span>
+      <span class="modal-field-value" id="modal-status">—</span>
+    </div>
+
+    <p class="modal-note">
+      Please review your details before sending.<br/>
+      You may also save this and send it later.
+    </p>
+
+    <div class="modal-actions">
+      <button class="btn-outline-gold" id="saveLaterBtn">Save for Later</button>
+      <button class="btn-gold-solid" id="sendNowBtn">Send Now</button>
+    </div>
+
+  </div>
+</div>
+      <!-- Success state -->
+      <div id="rsvp-success" class="rsvp-success" style="background: white; border: 1px solid #EDE5D8;">
+        <div class="ornament text-4xl mb-6">✦</div>
+        <h3 class="font-serif text-4xl font-light mb-4" style="color:#2C1F14; font-style:italic;">Thank You!</h3>
+        <p class="font-sans font-light text-sm" style="color:#6B5B4E; line-height:1.8; max-width:380px; margin:0 auto;">We have received your RSVP and are so thrilled to celebrate with you. Look out for your invitation in the mail!</p>
+        <div class="deco-line mx-auto mt-6"></div>
+      </div>
+    </div>
+  </section>
+
+<section id="schedule" class="py-24 px-6" style="background: #EDE5D8;">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-14">
+        <p class="font-sans font-light tracking-widest text-xs mb-3" style="color:#C9A84C; letter-spacing:0.25em; text-transform:uppercase;">May 20, 2026</p>
+        <!-- <h2 class="font-serif text-5xl font-light mb-4" style="color:#2C1F14; font-style:italic;">May 20, 2026</h2> -->
+        <div class="section-divider"><span class="ornament text-sm">✦</span></div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <!-- <h3 class="font-serif text-2xl font-light mb-8" style="color:#2C1F14; border-bottom:1px solid #D4C4B0; padding-bottom:0.75rem;">The Ceremony &amp; Evening</h3> -->
+          <div class="relative">
+            <div class="space-y-8">
+              <div class="flex gap-4 relative">
+                <div class="flex flex-col items-center">
+                  <div class="timeline-dot mt-1"></div>
+                  <div class="w-px flex-1 mt-2" style="background: linear-gradient(180deg, #C9A84C, rgba(201,168,76,0.1))"></div>
+                </div>
+                <div class="pb-6">
+                  <p class="font-sans font-light text-xs tracking-widest mb-1" style="color:#C9A84C; text-transform:uppercase; letter-spacing:0.15em;">2:30 PM</p>
+                  <h4 class="font-serif text-lg font-light mb-1" style="color:#2C1F14;">Guest Arrival</h4>
+                  <p class="font-sans font-light text-sm" style="color:#8C7B6B; line-height:1.7;">Guests are welcomed and ushered to their seats as they prepare for the ceremony..</p>
+                </div>
+              </div>
+              <div class="flex gap-4 relative">
+                <div class="flex flex-col items-center">
+                  <div class="timeline-dot mt-1"></div>
+                  <div class="w-px flex-1 mt-2" style="background: linear-gradient(180deg, #C9A84C, rgba(201,168,76,0.1))"></div>
+                </div>
+                <div class="pb-6">
+                  <p class="font-sans font-light text-xs tracking-widest mb-1" style="color:#C9A84C; text-transform:uppercase; letter-spacing:0.15em;">3:00 PM</p>
+                  <h4 class="font-serif text-lg font-light mb-1" style="color:#2C1F14;">Worship and Wedding Ceremony</h4>
+                  <p class="font-sans font-light text-sm" style="color:#8C7B6B; line-height:1.7;">The ceremony takes place in the Fairmount Hills Gazebo. A time of praise and worship, followed by the exchange of vows and rings as the couple is united in marriage. Please be seated by 3:00 PM.</p>
+                  <a href="https://maps.app.goo.gl/gC9CSBW8FLQp8uED7" target="_blank" class="inline-flex items-center gap-1 font-sans font-light text-xs mt-2" style="color:#C9A84C; text-decoration:underline; text-underline-offset:3px;">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    View on Map
+                  </a>
+                </div>
+              </div>
+              <div class="flex gap-4 relative">
+                <div class="flex flex-col items-center">
+                  <div class="timeline-dot mt-1"></div>
+                  <div class="w-px flex-1 mt-2" style="background: linear-gradient(180deg, #C9A84C, rgba(201,168,76,0.1))"></div>
+                </div>
+                <div class="pb-6">
+                  <p class="font-sans font-light text-xs tracking-widest mb-1" style="color:#C9A84C; text-transform:uppercase; letter-spacing:0.15em;">5:00 PM</p>
+                  <h4 class="font-serif text-lg font-light mb-1" style="color:#2C1F14;">Reception and Dinner</h4>
+                  <p class="font-sans font-light text-sm" style="color:#8C7B6B; line-height:1.7;">Dinner, dancing, and fellowship in the Gazebo as we celebrate together. Reception ends at 7:00 PM.</p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-serif text-2xl font-light mb-8" id="travel" style="color:#2C1F14; border-bottom:1px solid #D4C4B0; padding-bottom:0.75rem;">Theme, Venue and Travel Details</h3>
+          <div class="card-hover mb-5" style="background:white; border:1px solid #D4C4B0; padding:1.5rem;">
+            <div class="flex items-start gap-3">
+              <span class="ornament text-lg mt-1" style="font-size:1.1rem;">✦</span>
+              <div>
+                <h4 class="font-serif text-lg font-light mb-1" style="color:#2C1F14;">Fairmount Hills Event Place</h4>
+                <p class="font-sans font-light text-sm mb-2" style="color:#8C7B6B;">1870 Antipolo Rizal, Fairmount Hills Clubhouse</p>
+                <a href="https://maps.google.com" target="_blank" class="btn-outline inline-block" style="padding:0.5rem 1.2rem; font-size:0.6rem;">Get Directions</a>
+              </div>
+            </div>
+          </div>
+          <div class="space-y-5">
+            <div class="hotel-card">
+              <h4 class="font-serif text-lg font-light mb-3" style="color:#2C1F14;">🚌 Via Commute (From Tondo)</h4>
+              <p class="font-sans font-light text-sm mb-3" style="color:#8C7B6B; line-height:1.7;">From Divisoria, ride a jeepney to LRT-2. Take the train from Recto Station to Antipolo Station. Then ride a jeepney to Robinsons Antipolo. From there, you can take a tricycle to Fairmount Hills Events Place.</p>
+              <p class="font-sans font-light text-xs" style="color:#C9A84C;">Kindly send us a message for the exact location details.</p>
+            </div>
+          </div>
+
+      <div class="my-10" style="background:white; border:1px solid #D4C4B0;">
+        <div class="flex items-center justify-center gap-4 flex-wrap">
+          <img src="./assets/collor-pallete.jpg" alt="color-palette" />
+        </div>
+        <p class="font-sans font-light text-xs text-center mt-5" style="color:#B8A898; font-size:0.7rem;">* If champagne tones are not available, wearing white is perfectly welcome. ✨🥂.</p>
+    </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="story" class="py-24 px-6" style="background:#FAF6F0;">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-14">
+        <p class="font-sans font-light tracking-widest text-xs mb-3" style="color:#C9A84C; letter-spacing:0.25em; text-transform:uppercase;">The Beginning of Us</p>
+        <h2 class="font-serif text-5xl font-light mb-4" style="color:#2C1F14; font-style:italic;">Our Prenup Gallery</h2>
+        <div class="section-divider"><span class="ornament text-sm">✦</span></div>
+      </div>
+      
+      <!-- Story narrative -->
+      <!-- <div class="max-w-2xl mx-auto mb-16 text-center">
+        <p class="font-serif text-xl font-light mb-6" style="color:#2C1F14; line-height:1.9; font-style:italic;">"Some love stories are slow burns, written in coffee shops and quiet weekdays - and some change your life in a single afternoon."</p>
+
+        <div class="space-y-5 text-left">
+          <div class="gold-border-l pl-5">
+            <p class="font-sans font-light text-xs tracking-widest mb-2" style="color:#C9A84C; text-transform:uppercase; letter-spacing:0.2em;">2019 · The Beginning</p>
+            <p class="font-sans font-light text-sm" style="color:#6B5B4E; line-height:1.9;">Rose and Rome met at a mutual friend's gallery opening in Manila. Rome spotted Rose across the room, convinced she was the most interesting person there - he was absolutely right. They talked until the gallery closed, and then for three more hours on the steps outside.</p>
+          </div>
+          <div class="gold-border-l pl-5">
+            <p class="font-sans font-light text-xs tracking-widest mb-2" style="color:#C9A84C; text-transform:uppercase; letter-spacing:0.2em;">2021 · Adventures & Big Moves</p>
+            <p class="font-sans font-light text-sm" style="color:#6B5B4E; line-height:1.9;">After two years of weekday trips to the coast, cooking disasters in their tiny apartment, and a memorable road trip through the Pacific Northwest, Rome surprised Rose with a proposal under the stars at their favorite vineyard in Fairmount Hill Event Place, Antipolo Rizal - the very place they are now getting married.</p>
+          </div>
+          <div class="gold-border-l pl-5">
+            <p class="font-sans font-light text-xs tracking-widest mb-2" style="color:#C9A84C; text-transform:uppercase; letter-spacing:0.2em;">2026 · Forever</p>
+            <p class="font-sans font-light text-sm" style="color:#6B5B4E; line-height:1.9;">Now, surrounded by their dearest family and friends in the place that started it all, Rose and Rome are ready to begin the most beautiful chapter of their story. We are so grateful you are here to celebrate it with us.</p>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- Photo Gallery -->
+      <!-- <h3 class="font-serif text-2xl font-light text-center mb-8 py-8" style="color:#2C1F14;">Photo Gallery</h3> -->
+      <!-- <div class="section-divider"><span class="ornament text-sm">✦</span></div> -->
+      <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-3 gap-3">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- See More Button -->
+      <div id="see-more-wrap" class="text-center mt-8" style="display:none;">
+        <button id="see-more-btn" class="btn-outline">See More Photos</button>
+      </div>
+    </div>
+  </section>
+
+  <div id="lightbox" style="display:none; position:fixed; inset:0; z-index:1000; background:rgba(0, 0, 0, 0.84); backdrop-filter:blur(8px); align-items:center; justify-content:center;">
+    <button id="lb-close" style="position:absolute; top:1.25rem; right:1.5rem; background:none; border:none; cursor:pointer; color:#E8C98A; font-size:1.8rem; line-height:1; opacity:0.8; transition:opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.8">✕</button>
+    <div id="lb-counter" style="position:absolute; top:1.4rem; left:50%; transform:translateX(-50%); font-family:'Jost',sans-serif; font-weight:300; font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase; color:#8C7B6B;"></div>
+    <button id="lb-prev" style="position:absolute; left:1rem; top:50%; transform:translateY(-50%); background:rgba(250,246,240,0.08); border:1px solid rgba(201,168,76,0.3); color:#E8C98A; width:44px; height:44px; cursor:pointer; font-size:1.2rem; transition:all 0.2s; display:flex; align-items:center; justify-content:center;" onmouseover="this.style.background='rgba(201,168,76,0.2)'" onmouseout="this.style.background='rgba(250,246,240,0.08)'">&#8592;</button>
+    <button id="lb-next" style="position:absolute; right:1rem; top:50%; transform:translateY(-50%); background:rgba(250,246,240,0.08); border:1px solid rgba(201,168,76,0.3); color:#E8C98A; width:44px; height:44px; cursor:pointer; font-size:1.2rem; transition:all 0.2s; display:flex; align-items:center; justify-content:center;" onmouseover="this.style.background='rgba(201,168,76,0.2)'" onmouseout="this.style.background='rgba(250,246,240,0.08)'">&#8594;</button>
+    <div style="max-width:88vw; max-height:82vh; display:flex; flex-direction:column; align-items:center; gap:1rem;">
+      <img id="lb-img" src="" alt="" style="max-width:100%; max-height:75vh; object-fit:contain; display:block;" />
+      <p id="lb-caption" class="font-serif" style="color:#E8C98A; font-style:italic; font-size:1rem; font-weight:300; text-align:center; opacity:0.85;"></p>
+    </div>
+  </div>
+
+  
+  <section id="faq" class="py-24 px-6" style="background:#EDE5D8;">
+    <div class="max-w-3xl mx-auto">
+
+      <div class="text-center mb-14">
+        <p class="font-sans font-light tracking-widest text-xs mb-3" style="color:#C9A84C; letter-spacing:0.25em; text-transform:uppercase;">Need to Know</p>
+        <h2 class="font-serif text-5xl font-light mb-4" style="color:#2C1F14; font-style:italic;">Frequently Asked Questions</h2>
+        <div class="section-divider"><span class="ornament text-sm">✦</span></div>
+      </div>
+      <!-- FAQ Accordion -->
+      <div id="faq-accordion" style="background:white; border:1px solid #D4C4B0; padding:0 1.75rem;"></div>
+
+      <div class="text-center mt-10">
+        <p class="font-sans font-light text-sm mb-4" style="color:#8C7B6B;">Still have questions?</p>
+        <a href="mailto:jerome.encinares0016@gmail.com" class="btn-outline inline-block">Contact Us</a>
+      </div>
+    </div>
+  </section>
+  
+
+  <footer class="py-16 px-6 text-center" style="background:linear-gradient(160deg,#2C1F14,#3D2A1A);">
+    <div class="max-w-2xl mx-auto">
+      <div class="ornament text-3xl mb-4" style="color:#C9A84C;">✦</div>
+      <h3 class="font-serif text-4xl font-light mb-2" style="color:#F7E7CE; font-style:italic;">Jerome &amp; Justine</h3>
+      <p class="font-sans font-light text-xs tracking-widest mb-6" style="color:#8C7B6B; letter-spacing:0.2em; text-transform:uppercase;">May 20, 2026 · Fairmount Hill Event Place, Antipolo Rizal</p>
+      <div class="deco-line mx-auto mb-6"></div>
+      <p class="font-serif text-lg font-light mb-2" style="color:#E8C98A; font-style:italic; opacity:0.8;">"And over all these virtues put on love, which binds them all together in perfect unity"</p>
+      <p class="font-serif text-lg font-light mb-6" style="color:#E8C98A;  opacity:0.8;">"Colossians 3:14 (NIV)"</p>
+      <div class="flex justify-center gap-6 mb-8">
+        <a href="#home" class="nav-link" style="color:#8C7B6B;">Home</a>
+        <a href="#rsvp" class="nav-link" style="color:#8C7B6B;">RSVP</a>
+        <a href="#schedule" class="nav-link" style="color:#8C7B6B;">Schedule</a>
+        <a href="#travel" class="nav-link" style="color:#8C7B6B;">Travel</a>
+        <a href="#story" class="nav-link" style="color:#8C7B6B;">Gallery</a>
+      </div>
+      <p class="font-sans font-light text-xs" style="color:#5C4D40; letter-spacing:0.08em;">Questions? <a href="mailto:jerome.encinares0016@gmail.com" style="color:#C9A84C;">jerome.encinares0016@gmail.com</a></p>
+      <p class="font-sans font-light text-xs mt-3" style="color:#3D2E22; font-size:0.65rem;">RSVP Deadline: March 15, 2026</p>
+    </div>
+  </footer>
+
+  <!-- Firebase SDK -->
+  <script src="./js/script.js" type="module">
+   
+  </script>
+</body>
+</html>
