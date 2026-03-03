@@ -229,6 +229,7 @@ function showDraftToast(msg) {
         guestCount: attendingEl.value === 'yes' ? guestCount : 0,
         note,
         archived: false,
+        roles: 'guest',
         submittedAt: serverTimestamp()
       });
 
